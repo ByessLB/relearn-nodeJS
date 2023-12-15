@@ -1,0 +1,19 @@
+La ligne de code suivante utilise la fonction compare du module bcrypt pour comparer un mot de passe fourni par l'utilisateur avec le mot de passe stocké dans la base de données :
+
+bcrypt.compare(user.pwd, row[0].password, function (err, res)
+
+- bcrypt : C'est un module Node.js qui fournit des fonctions de hachage de mots de passe en utilisant l'algorithme de hachage bcrypt. Il est utilisé pour stocker les mots de passe de manière sécurisée en les hachant.
+
+- compare : C'est une méthode fournie par le module bcrypt qui permet de comparer un mot de passe en texte clair avec un mot de passe haché. Elle prend trois arguments :
+
+  - user.pwd : C'est le mot de passe fourni par l'utilisateur, généralement saisi dans un formulaire de connexion.
+
+  - row[0].password : C'est le mot de passe haché stocké dans la base de données. Dans votre cas, vous récupérez cela à partir de la première ligne (row[0]) des résultats de la requête SQL.
+
+  - function (err, res) : C'est une fonction de rappel (callback) qui sera appelée une fois que la comparaison est effectuée. Elle prend deux paramètres :
+
+    - err : C'est une éventuelle erreur survenue lors de la comparaison. Si tout se passe bien, err sera null.
+
+    - res : C'est le résultat de la comparaison. Si les mots de passe correspondent, res sera true. Sinon, il sera false.
+
+En résumé, cette ligne de code utilise la fonction compare de bcrypt pour vérifier si le mot de passe fourni par l'utilisateur correspond au mot de passe stocké dans la base de données. Si la comparaison est réussie, res sera true, indiquant que les mots de passe correspondent. Sinon, res sera false, indiquant que le mot de passe est incorrect. Toutefois, veillez à bien gérer les erreurs éventuelles en vérifiant la valeur de err également.

@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron">
+  <h1>Liste des utilisateurs</h1>
+</div>
+
+<div class="btn">
+  <a href="/">Retour</a>
+</div>
+
+<% user.forEach(function(use){ %>
+  <div class="container">
+    <h3><%= use.nom %> <%= use.prenom %></h3>
+
+    <p><%=use.email%></p>
+
+    <a href="/profil/<%=use.id%>">Profil</a>
+    <a href="/form_modif/<%=use.id%>">Modifier</a>
+    <a href="/delete/<%=use.id%>">Supprimer</a>
+  <hr />
+</div>
+<% }) %> <%- include('partials/footer') %>

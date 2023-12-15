@@ -1,0 +1,22 @@
+{
+  "name": "relearn-node",
+  "version": "1.0.0",
+  "description": "relearn-node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ByessLB",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonfile": "^6.1.0",
+    "mysql2": "^3.6.5",
+    "node": "^21.2.0"
+  }
+}

@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron">
+    <h1>Bienvenue dans notre librairie</h1>
+  </div>
+<div id="connection">
+    <div class="connection">
+        <div class="log">
+            <h3>
+                    Connexion
+            </h3>
+        </div>
+            <% if (user && user.Id_User) { %>
+            <div class="login">
+                <a href="/profil">Profil</a>
+                <a href="/logout">Se déconnecter</a>
+            </div>
+            <% } else { %>
+                <div class="logup">
+                <a href="/login">Se connecter</a>
+                <a href="/logup">S'inscrire</a>
+            </div>
+            <% } %>
+    </div>
+</div>
+
+<div id="container">
+    <div class="container">
+        <div class="article">
+            
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

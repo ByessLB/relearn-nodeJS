@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron">
+    <h1>Supprimer le profil</h1>
+</div>
+
+<div class="container">
+    <div class="btn">
+        <a href="/">Retour</a>
+    </div>
+
+    <% if (error) { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    <% } else if (message) { %>
+        <div class="alert alert-success" role="alert">
+            <%= message %>
+        </div>
+    <% } %>
+
+        <form action="/delete" method="post">
+        <h3>Etes-vous sûr de vouloir supprimer votre compte?</h3>
+        <div class="form-group">
+            <label for="confirmPassword">Confirmez votre mot de passe pour supprimer le profil:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+
+        <div class="btn">
+            <input type="submit" value="Supprimer le profil" />
+        </div>
+    </form>
+</div>
+
+<%- include('partials/footer') %>

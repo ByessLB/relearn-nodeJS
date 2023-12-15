@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron">
+  <h1>Liste des utilisateurs</h1>
+</div>
+
+<div class="btn">
+  <a href="/">Retour</a>
+</div>
+
+<div class="container">
+  <h3><%= user.nom %> <%= user.prenom %></h3>
+  <p><%= user.email %></p>
+  <div class="btn-change">
+    <a href="/form_update">Modifier</a>
+    <a href="/confirm_delete">Supprimer</a>
+  </div>
+  <hr />
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+<div class="jumbotron">
+  <h1>LOGIN</h1>
+</div>
+
+<% if (error) { %>
+  <p style="color: red;"><%= error %></p>
+<% } %>
+
+<a href="/">retour</a>
+
+<div class="container">
+  <div class="form-group">
+    <form action="/log" method="post">
+      <div class="input">
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email" required /><br><br>
+      </div>
+
+      <div class="input">
+        <label for="pwd">Password</label><br>
+        <input type="password" name="pwd" id="pwd" required /><br><br>
+      </div>
+
+      <div class="btn">
+        <input type="submit" value="Valider" />
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
